@@ -9,9 +9,13 @@ class Person:
         self.email = email
 
 
-class PersonTest(Person):
-    def __init__(self, name: str, address: str, email: str):
-        super().__init__(name, address, email)
+class PersonTest:
+    __slots__ = ('name', 'address', 'email')
+
+    def __init__(self, name, address, email):
+        self.name = name
+        self.address = address
+        self.email = email
 
 
 def get_set_delete(person):
