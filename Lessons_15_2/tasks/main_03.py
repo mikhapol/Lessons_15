@@ -4,7 +4,7 @@ class Vehicle:
         self.position = position
 
     def travel(self, destination):
-        route = self.calculate_route(source=self.position, to=destination)
+        route = self.calculate_route(to=destination, source=self.position)
         self.move_along(route)
 
     @staticmethod
@@ -31,4 +31,5 @@ class Airplane(Vehicle):
 if __name__ == '__main__':
     car = Car((10, 20))
     car.turn_on_radio('Moscow FM')
+    print(car.position)
     # Играть Moscow FM
